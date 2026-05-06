@@ -52,7 +52,7 @@ if (formData.profile_image) {
 }
 
 const response = await axios.post(
-  "http://localhost:8000/credentials/local-register/",
+  "https://divyadavis.pythonanywhere.com/credentials/local-register/",
   data,
   {
     headers: {
