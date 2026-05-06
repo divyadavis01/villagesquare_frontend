@@ -1,6 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router"
 import { useEffect, useState } from "react"
-import "./navbar.css"
+import "./Navbar.css"
 import HomeIcon from "@mui/icons-material/Home";
 import { LoginOutlined } from "@mui/icons-material";
 import Face6Icon from '@mui/icons-material/Face6';
