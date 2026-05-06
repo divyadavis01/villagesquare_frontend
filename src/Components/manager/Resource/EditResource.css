@@ -1,0 +1,199 @@
+/* Edit Resource Container */
+.edit-resource-container {
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 40px;
+}
+
+.edit-resource-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+/* Page Background */
+body {
+  background: linear-gradient(135deg, #dbeafe 0%, #ffffff 50%, #d1fae5 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Edit Resource Header */
+.edit-resource-header {
+  padding: 0;
+}
+
+.edit-resource-header h2 {
+  text-align: center;
+  color: #1eaf49;
+  font-size: 28px;
+  margin: 30px 0;
+  padding: 0 40px;
+  font-weight: 600;
+}
+
+/* Form */
+.edit-resource-form {
+  padding: 0 40px 40px 40px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+/* Text Inputs, Number Inputs */
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  background-color: #f9fafb;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Placeholder */
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Select Dropdown */
+.form-select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  background-color: #f9fafb;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Textarea */
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.2s;
+  background-color: #f9fafb;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Availability Group */
+.availability-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Checkbox */
+.form-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #22c55e;
+}
+
+/* File Input */
+.form-file {
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #f9fafb;
+  transition: all 0.2s;
+}
+
+.form-file:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+/* Update Button - Green like EditEvent */
+.update-button {
+  width: 100%;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
+}
+
+.update-button:hover {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.3);
+}
+
+.update-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .edit-resource-container {
+    margin: 30px 20px;
+    padding: 30px 25px;
+  }
+
+  .edit-resource-header h2 {
+    font-size: 24px;
+    margin: 25px 0;
+    padding: 0 25px;
+  }
+
+  .edit-resource-form {
+    padding: 0 25px 30px 25px;
+  }
+}

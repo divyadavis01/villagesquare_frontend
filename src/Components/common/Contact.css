@@ -1,0 +1,207 @@
+.contact-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffffff 0%, #f0f9ff 50%, #f0fdf4 100%);
+}
+
+/* HEADER SECTION */
+.contact-header {
+  background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-bottom: 4px solid #34d399;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+}
+
+.contact-header p {
+  font-size: 1.25rem;
+  margin: 0;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+}
+
+/* CONTACT INFO SECTION */
+.contact-info {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.1);
+  border-top: 4px solid #3b82f6;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: #1e40af;
+  margin: 0 0 2rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #34d399;
+  display: inline-block;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(to right, #f0f9ff, #f0fdf4);
+  border-radius: 8px;
+  border-left: 4px solid #10b981;
+  transition: all 0.3s ease;
+}
+
+.contact-info p:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* HELP SECTION */
+.help-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  background: #f0fdf4;
+  border-radius: 12px;
+  border-left: 5px solid #059669;
+}
+
+.help-section h2 {
+  font-size: 2rem;
+  color: #1e40af;
+  margin: 0 0 2rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #34d399;
+  display: inline-block;
+}
+
+.help-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help-section ul li {
+  font-size: 1.1rem;
+  color: #1f2937;
+  padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.help-section ul li::before {
+  content: '?';
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.75rem;
+  height: 1.75rem;
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.help-section ul li:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  cursor: pointer;
+}
+
+/* CONTACT ACTIONS SECTION */
+.contact-actions {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-actions button {
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.contact-actions button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.contact-actions button:active {
+  transform: translateY(-1px);
+}
+
+/* FOOTER SECTION */
+.contact-footer {
+  background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 4px solid #34d399;
+}
+
+.contact-footer p {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+  }
+
+  .contact-info,
+  .help-section {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .contact-info h2,
+  .help-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info p,
+  .help-section ul li {
+    font-size: 1rem;
+  }
+
+  .contact-info p:hover,
+  .help-section ul li:hover {
+    transform: translateX(4px);
+  }
+
+  .contact-actions button {
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+  }
+}

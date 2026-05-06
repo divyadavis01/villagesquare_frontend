@@ -1,0 +1,139 @@
+/* Edit Event Container - Reuses add-event-container styles */
+.add-event-container {
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* Page Background */
+body {
+  background: linear-gradient(135deg, #dbeafe 0%, #ffffff 50%, #d1fae5 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Heading */
+.add-event-container h2 {
+  text-align: center;
+  color: #1e40af;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Form */
+.add-event-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Text Inputs */
+.add-event-container input[type="text"],
+.add-event-container input[type="date"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  background-color: #f9fafb;
+}
+
+.add-event-container input[type="text"]:focus,
+.add-event-container input[type="date"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Textarea */
+.add-event-container textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.2s;
+  background-color: #f9fafb;
+}
+
+.add-event-container textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Placeholder */
+.add-event-container input::placeholder,
+.add-event-container textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* File Input */
+.add-event-container input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #f9fafb;
+  transition: all 0.2s;
+}
+
+.add-event-container input[type="file"]:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+/* Submit Button */
+.add-event-container button[type="submit"] {
+  width: 100%;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
+  margin-top: 10px;
+}
+
+.add-event-container button[type="submit"]:hover {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.3);
+}
+
+.add-event-container button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-event-container {
+    margin: 30px 20px;
+    padding: 30px 25px;
+  }
+
+  .add-event-container h2 {
+    font-size: 24px;
+  }
+}

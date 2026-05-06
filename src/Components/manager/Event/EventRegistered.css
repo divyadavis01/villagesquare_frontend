@@ -1,0 +1,308 @@
+/* EventRegistered.css - White, Blue, Green Theme */
+
+.registrations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+.registrations-container h2 {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.registrations-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+/* Event List Grid */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Event Card */
+.event-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2);
+  border-color: #3498db;
+}
+
+.event-card:hover::before {
+  transform: scaleX(1);
+}
+
+.event-card h3 {
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.event-card p {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* View Registrations Button (Blue - View Action) */
+.event-card button {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.event-card button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.event-card button:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  transform: translateY(-2px);
+}
+
+.event-card button:active {
+  transform: translateY(0);
+}
+
+/* Registration Table */
+.registrations-table {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.6s ease;
+  border-collapse: collapse;
+}
+
+.registrations-table thead {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+}
+
+.registrations-table thead tr th {
+  padding: 18px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.registrations-table tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: all 0.3s ease;
+}
+
+.registrations-table tbody tr:hover {
+  background: linear-gradient(90deg, #f8fbff 0%, #ffffff 100%);
+  transform: scale(1.01);
+}
+
+.registrations-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.registrations-table tbody tr td {
+  padding: 15px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.registrations-table tbody tr td:first-child {
+  font-weight: 600;
+  color: #3498db;
+}
+
+/* Status Badges */
+.status-registered {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+}
+
+.status-cancelled {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+}
+
+/* Loading and Empty States */
+.registrations-container > p {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 16px;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.event-list > p {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 16px;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .registrations-container {
+    padding: 30px 15px;
+  }
+
+  .registrations-container h2 {
+    font-size: 24px;
+  }
+
+  .event-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .registrations-table {
+    font-size: 12px;
+  }
+
+  .registrations-table thead tr th,
+  .registrations-table tbody tr td {
+    padding: 12px 8px;
+  }
+
+  .event-card h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .registrations-container h2 {
+    font-size: 20px;
+  }
+
+  .event-card {
+    padding: 20px;
+  }
+
+  .registrations-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .status-registered,
+  .status-cancelled {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,138 @@
+/* View Events Container */
+.view-events-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+/* Page Background */
+body {
+  background: linear-gradient(135deg, #dbeafe 0%, #ffffff 50%, #d1fae5 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Heading */
+.view-events-container h2 {
+  text-align: center;
+  color: #1e40af;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Event Card */
+.event-card {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Event Image */
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+/* Event Card Content */
+.event-card h3 {
+  color: #1f2937;
+  font-size: 20px;
+  margin: 20px 20px 10px;
+  font-weight: 600;
+}
+
+.event-card p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px 20px;
+}
+
+.event-card strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Event Buttons */
+.event-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #f3f4f6;
+  background-color: #f9fafb;
+}
+
+/* Edit Button */
+.edit-btn {
+  flex: 1;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-1px);
+}
+
+/* Delete Button */
+.delete-btn {
+  flex: 1;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .view-events-container {
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .view-events-container h2 {
+    font-size: 26px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

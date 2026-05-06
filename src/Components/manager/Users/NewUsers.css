@@ -1,0 +1,306 @@
+/* New Users Container */
+.new-users-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffffff 0%, #f0f9ff 50%, #f0fdf4 100%);
+}
+
+/* Page Title */
+.new-users-title {
+  font-size: 2.5rem;
+  color: #1e40af;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid #34d399;
+  background: linear-gradient(135deg, #1976d2, #2e7d32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Users Grid */
+.new-users-container .users-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User Card */
+.new-users-container .user-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  border: 2px solid transparent;
+  background-image: 
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(135deg, rgba(33, 150, 243, 0.3), rgba(76, 175, 80, 0.3));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 
+    0 4px 20px rgba(33, 150, 243, 0.1),
+    0 2px 10px rgba(76, 175, 80, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.new-users-container .user-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #2196f3, #4caf50);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.new-users-container .user-card:hover::before {
+  transform: scaleX(1);
+}
+
+.new-users-container .user-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 12px 40px rgba(33, 150, 243, 0.18),
+    0 6px 20px rgba(76, 175, 80, 0.12);
+}
+
+/* User Card Paragraph */
+.new-users-container .user-card p {
+  margin: 0 0 20px 0;
+  font-size: 17px;
+  color: #1f2937;
+  line-height: 1.6;
+  font-weight: 600;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.new-users-container .user-card strong {
+  color: #1976d2;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Approve Button */
+.approve-btn {
+  flex: 1;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.approve-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.3), 
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.approve-btn:hover::before {
+  left: 100%;
+}
+
+.approve-btn:hover {
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.approve-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Reject Button */
+.reject-btn {
+  flex: 1;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #f44336, #c62828);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.reject-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.3), 
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.reject-btn:hover::before {
+  left: 100%;
+}
+
+.reject-btn:hover {
+  background: linear-gradient(135deg, #ef5350, #d32f2f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+}
+
+.reject-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+}
+
+/* Empty State */
+.new-users-container .users-list > p {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  font-size: 1.3rem;
+  color: #6b7280;
+  font-weight: 500;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 2px dashed rgba(33, 150, 243, 0.3);
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.06);
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .new-users-container {
+    padding: 40px 20px;
+  }
+
+  .new-users-container .users-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-users-container {
+    padding: 30px 15px;
+  }
+
+  .new-users-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .new-users-container .users-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .new-users-container .user-card {
+    padding: 24px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .approve-btn,
+  .reject-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-users-container {
+    padding: 20px 10px;
+  }
+
+  .new-users-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .new-users-container .user-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .new-users-container .user-card p {
+    font-size: 16px;
+  }
+
+  .approve-btn,
+  .reject-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .new-users-container .users-list > p {
+    font-size: 1.1rem;
+    padding: 3rem 1.5rem;
+  }
+}
